@@ -1,0 +1,20 @@
+<header id="page-header">
+	<h1>Players</h1>
+</header>
+
+<body class="roster">
+	
+	<%= render "layouts/sidebar" %>
+
+  <% @players.each do |p| %>
+    <h2>
+      <%= self_intro(p) %><br />
+    </h2>
+    <img>
+	    <%= link_to(find_pic(p), player_path(p)) %>
+	  </img>
+  <% end %>
+		
+</body>
+
+<%= render "layouts/footer" %>

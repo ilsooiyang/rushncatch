@@ -1,0 +1,57 @@
+// Place all the styles related to the players controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+body.show {
+	h1 {
+		text-align: center;
+	}
+  p {
+  	margin-right: 30%;
+  	font-family: arial;
+  }
+  table {
+  	text-align: center;
+    font-family: arial;
+    th {
+    	color: $rnc_navy;
+    }
+    td {
+    	color: $rnc_yellow;
+    }
+  }
+  img {
+  	width: 50%;
+	 }
+ }
+
+body.index {
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+body.roster {
+	img {
+		display: block;
+		width: 50%;
+	}
+}
+
+body.edit {
+	img {
+		float: right;
+	}
+}
+
+
+
+
+
+
+
+
