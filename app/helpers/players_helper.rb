@@ -4,6 +4,7 @@ def self_intro(player)
 	end
 
 	def find_pic(player)
-		image_tag "#{player.profile_pic}"
+		player.profile_pic.blank? ? image_tag("rnc.png") : image_tag("#{player.profile_pic}")
 	end
+	
 end

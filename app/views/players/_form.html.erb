@@ -21,6 +21,7 @@
 	</p>
 	<p>
 	<%= f.submit %> |
-	<%= link_to("Cancel", players_path) %>
+	<%= link_to("Cancel", players_path) %> |
+  <%= link_to("Delete", @player, method: :delete, data: { confirm: 'Are you sure?' }) if Player.all.include?(@player) %>
 	</p>
 <% end %>
