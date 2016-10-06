@@ -1,13 +1,18 @@
-<header id="home-header">
-	<h1>Welcome to Rush N Catch</h1>
+<header id="page-header">
+	<h1>Players</h1>
 </header>
-<br />
-<body class="index">
-	<img>
-		<%= image_tag("practice.png") %>
-	</img>
+
+<body class="roster">
+	
+	<%= render "layouts/sidebar" %>
+
+  <% @players.each do |p| %>
+    <img>
+	    <%= link_to(find_pic(p), player_path(p)) %>
+	  </img>
+	  <br />
+  <% end %>
+		
 </body>
-<br />
-<footer id="home-footer">
-	<h1><%= link_to("Meet the Players", players_path) %></h1>
-</footer>
+
+<%= render "layouts/footer" %>

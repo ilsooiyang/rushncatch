@@ -1,0 +1,19 @@
+<header id="home-header">
+	<h1>RnC News</h1>
+</header>
+<br />
+<body>
+	<% @blogs.each do |b| %>
+		<% @player = Player.find(b.player_id) %>
+		<p>
+			<%= link_to(@player.name, player_path(@player)) %> |
+			<%= "#{time_ago_in_words(b.created_at)} ago" %>
+		</p>
+		<p>
+			<%= b.content %>
+		</p>
+	<% end %>
+</body>
+<br />
+<%= render "layouts/footer" %>
+

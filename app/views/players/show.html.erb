@@ -9,23 +9,23 @@
   <img>
     <%= find_pic(@player) %>    
   </img>
-  <p>
-    <%= self_intro(@player)%>
-  </p>
-  <table>
+<!--   <table>
     <tr>
       <th>Number</th>
       <td><%= @player.number %></td>
-    </tr>
-    <tr>
-      <th>Age</th>
-      <td><%= @player.age %></td>
     </tr>
     <tr>
       <th>Nationality</th>
       <td><%= @player.nationality %></td>
     </tr>
   </table>
-</body>
+ -->
+  <p>
+    <h1>
+      <%= link_to("글쓰기", new_player_blog_path(@player)) %>
+    </h1>
+  </p>
+
+ </body>
 
 <%= render "layouts/footer" %>

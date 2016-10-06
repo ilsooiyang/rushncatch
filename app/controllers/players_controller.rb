@@ -1,10 +1,9 @@
 class PlayersController < ApplicationController
-	def index
+	def home
 	end
 
-	def roster
+	def index
 		@players = Player.all
-		# @koreans, @foreigners = @players.partition {|p| p.korean?}
 	end
 
 	def show
@@ -15,23 +14,32 @@ class PlayersController < ApplicationController
 		@player = Player.new
 	end
 
+	def create
+		@player = Player.new(player_params)
+		if @player.save
+			redirect_to @player, notice: "'#{@player.name}' was created"
+		else
+			render :new
+		end
+	end
+
 	def edit
 		@player = Player.find(params[:id])
 	end
 
 	def update
-		@player = Player.find(params[:id]).update(player_params)
-		redirect_to players_path(@player)
-	end
-
-	def create
-		@player = Player.create(player_params)
-		redirect_to @player
+		@player = Player.find(params[:id])
+		if @player.update(player_params)
+			redirect_to @player, notice: "'#{@player.name}' was updated"
+		else
+			render :edit
+		end
 	end
 
 	def delete
-		Player.find(params[:id]).destroy
-		redirect_to players_path
+		@player = Player.find(params[:id])
+		@player.destroy
+		redirect_to players_path, alert: "'#{@player.name}' was deleted"
 	end
 
 end

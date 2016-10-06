@@ -2,14 +2,24 @@
 	<nav>
 		<ul>
 			<li>
+				<%= link_to "Home", home_path %>
+			</li>
+			<li>
 				<%= link_to "All Players", players_path %>
 			</li>
 			<li>
 				<%= link_to "Add New Player", new_player_path %>
 			</li>
-			<li>
-				<%= link_to("Edit Player", edit_player_path) if @player %>
-			</li>
+			<% if @player %>
+				<li>
+					<%= link_to("Edit Player", edit_player_path(@player)) %>
+				</li>
+				<% if @player.blogs.any? %>
+					<li>
+						<%= link_to("Posted by #{@player.name}", player_blog_path(@player)) %>
+					</li>
+				<% end %>
+			<% end %>
 		</ul>
 	</nav>  	
 </aside>

@@ -1,0 +1,22 @@
+<header id="home-header">
+	<h1><%= "Written by #{@player.name}" %></h1>
+</header>
+<br />
+<body>
+	<% @blogs.order(created_at: :desc).each do |b| %>
+		<p>
+			<%= "#{time_ago_in_words(b.created_at)} ago" %>
+		</p>
+		<p>
+			<%= b.content %>
+		</p>
+	<% end %>
+	<p>
+		Back to
+		<br />
+		<%= link_to("#{@player.name}", player_path(@player)) %> |
+		<%= link_to("RnC News", blogs_path) %>
+	</p>
+</body>
+<br />
+<%= render "layouts/footer" %>
