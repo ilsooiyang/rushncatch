@@ -1,0 +1,31 @@
+<header id="page-header">
+  <h1> <%= @player.name %> </h1>
+</header>
+
+<body class="show">
+  <br />
+  <%= render "layouts/sidebar" %>
+
+  <img>
+    <%= find_pic(@player) %>    
+  </img>
+<!--   <table>
+    <tr>
+      <th>Number</th>
+      <td><%= @player.number %></td>
+    </tr>
+    <tr>
+      <th>Nationality</th>
+      <td><%= @player.nationality %></td>
+    </tr>
+  </table>
+ -->
+  <p>
+    <h1>
+      <%= link_to("글쓰기", new_player_blog_path(@player)) %>
+    </h1>
+  </p>
+
+ </body>
+
+<%= render "layouts/footer" %>

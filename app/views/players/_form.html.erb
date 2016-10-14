@@ -1,0 +1,27 @@
+<%= form_for(@player) do |f| %>
+	<%= render "shared/errors" %>
+	<p>
+	<%= f.label :name %><br />
+	<%= f.text_field :name, size: 20, autofocus: true %>
+	</p>	
+	<p>
+	<%= f.label :number %><br />
+	<%= f.number_field :number, size: 5 %>
+	</p>
+	<p>
+	<%= f.label :nationality %><br />
+	<%= f.text_field :nationality, size: 20 %>
+	</p>
+	<p>
+	<%= f.label :profile_pic %><br />
+	<%= f.text_field :profile_pic, size: 30, placeholder: "e.g. name.jpg" %>
+	</p>
+	<p>
+	<%= f.submit %> |
+	<%= link_to("Cancel", players_path) %>
+  <% if @player.valid? %>
+	  | <%= link_to("Delete", @player, method: :delete, 
+	  data: { confirm: 'Are you sure?' }) %>
+	<% end %>
+	</p>
+<% end %>
