@@ -1,6 +1,10 @@
 class BlogsController < ApplicationController
 
 	def news
+<<<<<<< HEAD
+=======
+		@player = Player.new
+>>>>>>> 5a6013f10886859aebdb0f5bdc0f162d530e9742
 		@blogs = Blog.all
 	end
 
