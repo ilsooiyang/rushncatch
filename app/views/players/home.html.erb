@@ -24,16 +24,18 @@
           <hr class="primary">
             <div class="row">
                 <div class="col-lg-6 col-md-6 text-center">
-                    <div class="service-box">
-                        <span class="fa fa-5x fa-newspaper-o" aria-hidden="true"></span>
-                        <h3>RnC News</h3>
-                    </div>
+                    <%= link_to news_path do %>
+                        <span class="fa fa-5x fa-newspaper-o" 
+                        style="color: #000000"></span>
+                    <% end %>
+                    <h3>RnC News</h3>
                 </div>
                 <div class="col-lg-6 col-md-6 text-center">
-                    <div class="service-box">
-                        <span class="glyphicon glyphicon-user" style="font-size: 4.5em"></span>
-                        <h3>Meet the players</h3>
-                    </div>
+                    <%= link_to players_path do %>
+                        <span class="glyphicon glyphicon-user" 
+                        style="font-size: 4.5em; color: #000000"></span>
+                    <% end %>
+                    <h3>Meet the players</h3>
                 </div>
             </div>
           <hr class="primary">

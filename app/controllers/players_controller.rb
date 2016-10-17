@@ -36,7 +36,7 @@ class PlayersController < ApplicationController
 		end
 	end
 
-	def delete
+	def destroy
 		@player = Player.find(params[:id])
 		@player.destroy
 		redirect_to players_path, alert: "'#{@player.name}' was deleted"
