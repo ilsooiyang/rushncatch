@@ -1,16 +1,15 @@
-<header id="home-header">
-	<h1><%= "Written by #{@player.name}" %></h1>
+<header>
+	<h1><%= "Blog ##{@blog.id}" %></h1>
 </header>
 <br />
 <body>
-	<% @blogs.order(created_at: :desc).each do |b| %>
-		<p>
-			<%= "#{time_ago_in_words(b.created_at)} ago" %>
-		</p>
-		<p>
-			<%= b.content %>
-		</p>
-	<% end %>
+	<p>
+		<%= @blog.content %>
+	</p>
+	<p>
+		<%= link_to("Delete", @blog, method: :delete, 
+			data: { confirm: "Are you #{@player.name}?" }) %>
+	</p>
 	<p>
 		Back to
 		<br />

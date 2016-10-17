@@ -13,20 +13,13 @@
  *= require_tree .
  *= require_self
  */
-
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 /*
+
 ID's are unique (serial number)
 Class's are reusable (barcode)
 
-9/26
-1) FIGURE OUT HOW THE "stylesheets" work, which design info goes where?, rewatch video
-2) Make it pretty
-
-9/27
-1)Remove empty bullet point
-2)Move p/table to the right on show page
-3)Remove highlight/underline visited links
-
-9/28
-1)
 */

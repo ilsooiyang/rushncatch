@@ -1,4 +1,4 @@
-<aside id="sidebar">
+<aside>
 	<nav>
 		<ul>
 			<li>
@@ -16,7 +16,7 @@
 				</li>
 				<% if @player.blogs.any? %>
 					<li>
-						<%= link_to("Posted by #{@player.name}", player_blog_path(@player)) %>
+						<%= link_to("Posted by #{@player.name}", player_blogs_path(@player)) %>
 					</li>
 				<% end %>
 			<% end %>

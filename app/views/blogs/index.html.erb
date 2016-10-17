@@ -1,4 +1,4 @@
-<header id="home-header">
+<header>
 	<h1>RnC News</h1>
 </header>
 <br />
@@ -10,13 +10,10 @@
 			<%= "#{time_ago_in_words(b.created_at)} ago" %>
 		</p>
 		<p>
-			<%= b.content %>
+			<%= truncate(b.content, length: 100, separator: " ") %>
+			<%= link_to("See full post", player_blog_path(@player, b)) %>
 		</p>
 	<% end %>
 </body>
 <br />
 <%= render "layouts/footer" %>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a6013f10886859aebdb0f5bdc0f162d530e9742
