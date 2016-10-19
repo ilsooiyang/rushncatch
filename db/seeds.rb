@@ -12,25 +12,25 @@ Player.create!([
     name: "Il Soo Yang",
     number: 16,
     nationality: "Korea",
-    profile_pic: "ilsoo.jpg"
+    profile_pic: ""
   },
 	{
     name: "Sangho Lee",
     number: 35,
     nationality: "Korea",
-    profile_pic: "sangho.jpg"
+    profile_pic: ""
   },
 	{
     name: "Jon Fowler",
     number: 4,
     nationality: "USA",
-    profile_pic: "jfo.jpg"
+    profile_pic: ""
   },
 	{
     name: "Dina Lee",
     number: 37,
     nationality: "Korea",
-    profile_pic: "dina.jpg"
+    profile_pic: ""
   }
 ])
 
@@ -40,7 +40,7 @@ Blog.create!([
 		content:
     %{
     	안녕하세요! 저는 현재 Rails라는 프로그래밍 언어를 공부하고있습니다.
-			지금까지 배운 모든 지식을 동원해 러캐 홈페이지를 한번 만들어봤습니다.    	
+		지금까지 배운 모든 지식을 동원해 러캐 홈페이지를 한번 만들어봤습니다.    	
     	아직 몇 달 안해서 보시다시피 여러모로 비약합니다. 앞으로 꾸준히
     	보완해나갈 계획이니 조금만 기다려주시면 아마 나름 쓸모있는 웹사이트가
     	되지 않을까 하는 희망을 조금 가져봅니다. 우선 "Meet The Players"로
