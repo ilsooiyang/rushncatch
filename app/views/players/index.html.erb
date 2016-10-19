@@ -1,18 +1,46 @@
-<header>
-	<h1>Players</h1>
-</header>
+<body>
+  <div class="contanier">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <% 1.upto(@players.size - 1) do |n| %>
+              <li data-target="#myCarousel" data-slide-to="#{n}"></li>
+              <% end %>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+								<% f = @players.first %>
+								<%= link_to(find_pic(f), player_path(f)) %>
+								<div class="carousel-caption">
+									<h3><%= f.name %></h3>
+									<h4>#<%= f.number %></h4>
+								</div>
+              </div>
+							<% @players.drop(1).each do |p| %>
+							<div class="item">
+								<%= link_to(find_pic(p), player_path(p)) %>
+								<div class="carousel-caption">
+									<h3><%= p.name %></h3>
+									<h4>#<%= p.number %></h4>
+								</div>
+							</div>
+							<% end %>            
+	          </div>
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="icon-prev" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="icon-next" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<body class="roster">
-	
-	<%= render "layouts/sidebar" %>
-
-  <% @players.each do |p| %>
-    <img>
-	    <%= link_to(find_pic(p), player_path(p)) %>
-	  </img>
-	  <br />
-  <% end %>
-		
 </body>
 
 <%= render "layouts/footer" %>
