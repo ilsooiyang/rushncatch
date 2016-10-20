@@ -3,7 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
-.carousel-inner .item a img {
-	margin: auto;
+.carousel-inner .item {
+	img {
+		margin: auto;
+		width:500px;
+		height:500px;
+	}
 }

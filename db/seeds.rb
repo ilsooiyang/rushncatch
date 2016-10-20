@@ -12,7 +12,7 @@ Player.create!([
     name: "Il Soo Yang",
     number: 16,
     nationality: "Korea",
-    profile_pic: ""
+    profile_pic: "ilsoo.jpeg"
   },
 	{
     name: "Sangho Lee",
@@ -30,7 +30,25 @@ Player.create!([
     name: "Dina Lee",
     number: 37,
     nationality: "Korea",
-    profile_pic: ""
+    profile_pic: "dina.png"
+  },
+    {
+    name: "Suejin Park",
+    number: 52,
+    nationality: "Korea",
+    profile_pic: "suejin.jpeg"
+  },
+    {
+    name: "Hoyong Choi",
+    number: 91,
+    nationality: "Korea",
+    profile_pic: "hoyong.jpeg"
+  },
+    {
+    name: "Josh Hwang",
+    number: 48,
+    nationality: "Korea",
+    profile_pic: "josh.png"
   }
 ])
 

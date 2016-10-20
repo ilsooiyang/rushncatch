@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
 	end
 
 	def index
-		@players = Player.all
+		@players = Player.order(number: :asc)
 	end
 
 	def show
