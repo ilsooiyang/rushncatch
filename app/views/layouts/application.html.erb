@@ -26,7 +26,12 @@
   </body>
 
     <!-- Custom Theme JavaScript -->
-    <script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 1500
+        })
+    });
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
         e.preventDefault();
