@@ -1,7 +1,6 @@
 class BlogsController < ApplicationController
 
 	def news
-		@player = Player.new
 		@blogs = Blog.all
 	end
 

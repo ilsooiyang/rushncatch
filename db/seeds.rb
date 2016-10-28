@@ -93,6 +93,58 @@ Blog.create!([
     	organizers. Let me know if anyone sitting on the 
     	fence wanna be in our journey to Manila by tomorrow noon!
     }.squish
+  },
+    {
+        player: Player.find_by(name: "Sangho Lee"),
+        content:
+    %{
+        10.1. Whenever play stops during a point for a time-out, 
+        foul, violation, contested turnover, contested goal, 
+        technical stoppage, injury stoppage, or discussion, 
+        play must restart as quickly as possible with a check. 
+        The check may only be delayed for the discussion of a call.
+    }.squish
+  },
+    {
+        player: Player.find_by(name: "Josh Hwang"),
+        content:
+    %{
+        So, I'm finally where I wanna be
+        And I can't feel my legs
+        At the borders of reality
+        And I'm tripping over the edge like lord
+        I just died in your arms
+        There's no better way to go home
+        I just died in your arms
+        And I thought you should know that
+        You don't have to save me every time
+        Just leave me in the dark
+        You don't have to save me every time
+        Let me lose my heart, my heart, my heart
+        Now the waters are the open sea
+        They're inviting me in
+        Till the waves are crashing over me
+        Then I forget how to swim
+        Like lord
+        I just died in your arms
+        There's no better way to go home
+        I just died in your arms
+        And I thought you should know that
+        You don't have to save me every time
+        Just leave me in the dark
+        You don't have to save me every time
+        Let me lose my heart, my heart, my heart
+        I'll never learn
+        Tell me you love me
+        Just wanting me
+        Tell me you understand, oh
+        I'll never learn
+        Tell me you love me, oh
+        You don't have to save me every time
+        Just leave me in the dark
+        You don't have to save me every time
+        Let me lose my heart, my heart, my heart
+    }.squish
   }
 ])
 
