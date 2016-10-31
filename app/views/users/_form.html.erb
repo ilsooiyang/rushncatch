@@ -1,37 +1,47 @@
-<%= form_for(@user) do |f| %>
-	<%= render "shared/errors" %>
-	<p>
-	<%= f.label :name %><br>
-	<%= f.text_field :name, size: 20, autofocus: true %>
-	</p>	
-	<p>
-	<%= f.label :username %><br>
-	<%= f.text_field :username, size: 20 %>
-	</p>	
-	<p>
-	<%= f.label :email %><br>
-	<%= f.text_field :email, size: 30 %>
-	</p>	
-	<p>
-	<%= f.label :number %><br>
-	<%= f.number_field :number, size: 5 %>
-	</p>
-	<p>
-	<%= f.label :password %><br>
-	<%= f.password_field :password, size: 20 %>
-	</p>	
-	<p>
-	<%= f.label :password_confirmation %><br>
-	<%= f.password_field :password_confirmation, size: 20 %>
-	</p>	
-	<p>
-	<% if current_user %>
-		<%= f.submit "Update" %> |
-	<% else %>
-		<%= f.submit "Sign up" %> |
-	<% end %>
-		<%= link_to("Cancel", users_path) %> |
-	  <%= link_to("Delete Account", @user, method: :delete, 
-	  data: { confirm: 'Are you sure?' }) %>
-	</p>
-<% end %>
+ <%= form_for @user, :html => {:class => "form-horizontal center"} do |f| %>
+  <div class="form-group">
+    <%= f.label :name, "Name:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :name, size: 20, autofocus: true, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :username, "Username:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.text_field :username, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, "Email:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.email_field :email, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :number, "Number:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.number_field :number, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, "Password:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.password_field :password, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, "Confirm Password:", class: "col-md-4 control-label" %>
+    <div class="col-md-4">
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+  </div>
+  <p>
+    <% if current_user %>
+      <%= f.submit "Update", class: "btn btn-default btn-primary" %>
+    <% else %>
+      <%= f.submit "Sign up", class: "btn btn-default btn-primary" %>
+    <% end %>
+    <%= link_to("Cancel", users_path, class: "btn btn-default btn-primary") %>
+    <%= link_to("Delete Account", @user, method: :delete, class: "btn btn-default btn-primary", data: { confirm: 'Are you sure?' }) %>
+  </p>
+ <% end %>
