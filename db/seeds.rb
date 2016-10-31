@@ -1,4 +1,4 @@
-    # This file should contain all the record creation needed to seed the database with its default values.
+    r# This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
@@ -8,19 +8,27 @@
 
 
 User.create!([
-	{
-    name: "Il Soo Yang",
-    number: 16,
-    username: "ilsoo93",
-    email: "ilsooiyang@gmail.com",
-    password: "Ilsooiyang0@!6",
-    password_confirmation: "Ilsooiyang0@!6"
+    {
+    name: "Jiyeon Shin",
+    number: 11,
+    username: "earthnspace",
+    email: "earthnspace@gmail.com",
+    password: "jiyeon",
+    password_confirmation: "jiyeon"
+  },
+    {
+    name: "Sangho Lee",
+    number: 22,
+    username: "sangho",
+    email: "sangho@gmail.com",
+    password: "sangho",
+    password_confirmation: "sangho"
   }
 ])
 
 Blog.create!([
 	{
-		user: User.find_by(name: "Il Soo Yang"),
+		user: User.find_by(name: "Sangho Lee"),
 		content:
     %{
     	안녕하세요! 저는 현재 Rails라는 프로그래밍 언어를 공부하고있습니다.
