@@ -1,15 +1,15 @@
-<% if @player.errors.any? %>
+<% if @user.errors.any? %>
 <section id="errors">
   <header>
     <h2>
-      Oops! The <%= @player.class.name.humanize.downcase %> could not be saved. 
+      Oops! The <%= @user.class.name.humanize.downcase %> could not be saved. 
     </h2>
     <h3>
-      Please correct the following <%= pluralize(@player.errors.count, "error") %>:
+      Please correct the following <%= pluralize(@user.errors.count, "error") %>:
     </h3>
   </header>
   <ul>
-    <% @player.errors.full_messages.each do |message| %>
+    <% @user.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>

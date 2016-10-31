@@ -1,4 +1,3 @@
-
 module CarouselHelper
   def carousel_for(images)
     Carousel.new(self, images).html

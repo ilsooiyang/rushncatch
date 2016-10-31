@@ -5,11 +5,11 @@
         <div class="row">
 
             <div class="col-md-8">
-                <%= find_pic(@player) %>
+                <%= find_pic(@user) %>
             </div>
 
             <div class="col-md-4">
-                <h3>자기소개</h3>
+                <h3><%= "#{@user.name}"%></h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
                 <h3>Things I Like</h3>
                 <ul>
@@ -18,7 +18,7 @@
                     <li>Consectetur</li>
                     <li>Adipiscing Elit</li>
                 </ul>
-                <h3><%= link_to("Post as #{@player.name}", new_player_blog_path(@player)) %></h3>
+                <h3><%= link_to("Write a Post", new_user_blog_path(@user)) %></h3>
             </div>
 
         </div>

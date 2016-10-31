@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
-	root "players#home"
-	get "home" => "players#home"
-  resources :players do
+	root "users#home"
+	get "signin" => "sessions#new"
+	get "signup" => "users#new"
+
+	resource :session
+
+	get "home" => "users#home"
+  resources :users do
   	resources :blogs, :only => [:index, :show, :new]
   end
 
-  post "players/:player_id/blogs" => "blogs#create"
+  post "users/:user_id/blogs" => "blogs#create"
   get "news" => "blogs#news"
   resources :blogs, :except => [:index, :show, :new]
 

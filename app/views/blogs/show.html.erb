@@ -1,22 +1,22 @@
 <header>
 	<h1><%= "Blog ##{@blog.id}" %></h1>
 </header>
-<br />
+<br>
 <body>
 	<p>
 		<%= @blog.content %>
 	</p>
 	<p>
 		<%= link_to("Delete", @blog, method: :delete, 
-			data: { confirm: "Are you #{@player.name}?" }) %>
+			data: { confirm: "Are you #{@user.name}?" }) %>
 	</p>
 	<p>
 		Back to
-		<br />
-		<%= link_to("#{@player.name}", player_path(@player)) %> |
-		<%= link_to("RnC News", blogs_path) %>
+		<br>
+		<%= link_to("#{@user.name}", user_path(@user)) %> |
+		<%= link_to("RnC News", news_path) %>
 	</p>
 </body>
-<br />
+<br>
 
 <%= render "layouts/footer" %>

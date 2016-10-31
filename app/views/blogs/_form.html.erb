@@ -1,11 +1,11 @@
-<%= form_for([@player, @blog]) do |f| %>
+<%= form_for([@user, @blog]) do |f| %>
 	<%= render "shared/errors" %>
 	<p>
 	<%= f.label :content %><br />
-	<%= f.text_area :content, cols: 100, rows: 20 %>
+	<%= f.text_area :content, cols: 100, rows: 10 %>
 	</p>
 	<p>
-	<%= f.submit %> |
-	<%= link_to("Cancel", player_blogs_path(@player)) %>
+	<%= f.submit "Post" %> |
+	<%= link_to("Cancel", user_blogs_path(@user)) %>
 	</p>
 <% end %>

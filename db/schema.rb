@@ -10,23 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002032842) do
+ActiveRecord::Schema.define(version: 20161030094453) do
 
   create_table "blogs", force: :cascade do |t|
-    t.integer  "player_id"
+    t.integer  "user_id"
     t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["player_id"], name: "index_blogs_on_player_id"
+    t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 
-  create_table "players", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
+    t.string   "email"
+    t.string   "username"
     t.integer  "number"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.string   "nationality"
-    t.string   "profile_pic"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end

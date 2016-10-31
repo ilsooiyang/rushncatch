@@ -6,7 +6,7 @@
 
                 <%= link_to image_tag("rnc_small.png"), home_path, class: "pull-left" %>
 
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-news-players">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-news-users">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -14,17 +14,33 @@
 
             </div>
             
-            <div class="collapse navbar-collapse" id="home-news-players">
+            <div class="collapse navbar-collapse" id="home-news-users">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <%= link_to("Home", home_path) %>
-                    </li>
-                    <li>
-                        <%= link_to("News", news_path) %>
-                    </li>
-                    <li>
-                        <%= link_to("Players", players_path) %>
-                    </li>            
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default"><%= link_to("News",
+                         news_path) %></button>
+                        <button type="button" class="btn btn-default"><%= link_to("Players", users_path) %></button>
+                        <% if current_user %>
+                            <button type="button" class="btn btn-default"><%= link_to(current_user.name, user_path(current_user)) %></button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="caret"></span>
+                                <span class="sr-only">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <%= link_to("Account Settings", 
+                                        edit_user_path(current_user)) %>
+                                </li>
+                                <li role="separator" class="divider"></li>
+                                <li>
+                                    <%= link_to("Sign Out", 
+                                        session_path, method: :delete) %>
+                                </li>
+                            </ul>
+                        <% else %>
+                            <button type="button" class="btn btn-default"><%= link_to("Sign In", signin_path) %></button>
+                        <% end %>
+                    </div>
                 </ul>        
             </div>
         </div>
