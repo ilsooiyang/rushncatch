@@ -40,8 +40,8 @@ class UsersController < ApplicationController
 
 	def destroy
 		@user.destroy
-		session[:user_id] = nil
-		redirect_to users_path, alert: "'#{@user.name}' was deleted"
+		session[:user_id] = nil if current_user?(@user)
+		redirect_to players_path, alert: "'#{@user.name}' was deleted"
 	end
 
 end
@@ -58,9 +58,10 @@ private
 
 	def require_correct_user
 		set_user
-		unless current_user?(@user)
-			session[:intended_url] = request.url
-			redirect_to signin_path, alert: "Sign in first"
+		unless current_user?(@user) || current_user_admin?
+			#unless the dude that's signed in is the dude that's being deleted
+			#or the dude that's signed in is an admin
+			redirect_to root_path, alert: "Unauthorized Access"
 		end
 	end
 

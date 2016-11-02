@@ -19,8 +19,8 @@
                     <div class="btn-group">
                         <button type="button" class="btn btn-default"><%= link_to("News",
                          news_path) %></button>
-                        <button type="button" class="btn btn-default"><%= link_to("Players", users_path) %></button>
-                        <% if current_user %>
+                        <button type="button" class="btn btn-default"><%= link_to("Players", players_path) %></button>
+                        <% if any_user? && current_user %>
                             <button type="button" class="btn btn-default"><%= link_to(current_user.name, user_path(current_user)) %></button>
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="caret"></span>
