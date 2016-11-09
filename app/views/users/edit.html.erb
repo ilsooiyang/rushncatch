@@ -1,13 +1,10 @@
-<header>
-	<h1>Edit "<%= @user.name %>"</h1>
-</header>
+<div class="container user-page">
+	<div class="border-form-div">
+		<h2>Editing <%= @user.name %></h2>
 
-<br>
+		<%= render "form" %>
 
-<body>
-
-	<%= render "form" %>
-
-</body>
+	</div>
+</div>
 
 <%= render "layouts/footer" %>

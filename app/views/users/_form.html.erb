@@ -1,47 +1,36 @@
- <%= form_for @user, :html => {:class => "form-horizontal center"} do |f| %>
-  <div class="form-group">
-    <%= f.label :name, "Name:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_field :name, size: 20, autofocus: true, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :username, "Username:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.text_field :username, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :email, "Email:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.email_field :email, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :number, "Number:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.number_field :number, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :password, "Password:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.password_field :password, class: "form-control" %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= f.label :password_confirmation, "Confirm Password:", class: "col-md-4 control-label" %>
-    <div class="col-md-4">
-      <%= f.password_field :password_confirmation, class: "form-control" %>
-    </div>
-  </div>
-  <p>
-    <% if current_user %>
-      <%= f.submit "Update", class: "btn btn-default btn-primary" %>
-      <%= link_to("Delete Account", @user, method: :delete, class: "btn btn-default btn-primary", data: { confirm: 'Are you sure?' }) %>
-    <% else %>
-      <%= f.submit "Sign up", class: "btn btn-default btn-primary" %>
-    <% end %>
-    <%= link_to("Cancel", players_path, class: "btn btn-default btn-primary") %>
-  </p>
- <% end %>
+<%= form_for @user, :class => "form-signin" do |f| %>
+  <%= render "shared/errors" %>
+<div class="form-group">
+  <%= f.label :name, "Name:" %>
+  <%= f.text_field :name, autofocus: true, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :username, "Username:" %>
+  <%= f.text_field :username, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :email, "Email:" %>
+  <%= f.email_field :email, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :number, "Number:" %>
+  <%= f.number_field :number, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :password, "Password:" %>
+  <%= f.password_field :password, class: "form-control" %>
+</div>
+<div class="form-group">
+  <%= f.label :password_confirmation, "Confirm Password:" %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+</div>
+<p>
+  <% if current_user %>
+    <%= f.submit "Update", class: "btn btn-default btn-primary btn-block" %>
+    <%= link_to("Delete Account", @user, method: :delete, class: "btn btn-default btn-primary btn-block", data: { confirm: 'Are you sure?' }) %>
+  <% else %>
+    <%= f.submit "Sign up", class: "btn btn-default btn-primary btn-block" %>
+  <% end %>
+  <%= link_to("Cancel", players_path, class: "btn btn-default btn-primary btn-block") %>
+</p>
+<% end %>

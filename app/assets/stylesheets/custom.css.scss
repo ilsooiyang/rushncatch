@@ -1,0 +1,84 @@
+$light_navy: #171431;
+$dark_navy: #131127;
+$rnc_orange: #FCB525;
+
+.user-page {
+	padding-top: 20px;
+}
+
+/* Nav Bar */
+
+.navbar.navbar-custom {
+	background-color: $light_navy;
+	border-radius: 0;
+	border: 0;
+	margin-bottom: 0;
+}
+
+.navbar-custom .navbar-header .navbar-toggle {
+	background-color: white;
+}
+
+.navbar-custom .navbar-header .navbar-toggle .icon-bar {
+	background-color: $light_navy;
+}
+
+.navbar-custom .navbar-nav .dropdown-menu {
+	border: 0;
+}
+
+.navbar-custom .navbar-brand>img {
+  height: 100%;
+}
+
+.navbar-custom .navbar-brand {
+  padding: 0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+	color: white;	
+}
+
+.navbar-custom .navbar-nav > li > a:hover {
+	color: $rnc_orange;
+	background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > .close > a,
+.navbar-custom .navbar-nav > .close > a:hover,
+.navbar-custom .navbar-nav > .close > a:active,
+.navbar-custom .navbar-nav > .close > a:focus {
+	background-color: transparent;
+}
+
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:active,
+.navbar-custom .navbar-nav > .open > a:focus {
+	background-color: transparent;
+}
+
+.navbar-custom .navbar-nav .open .dropdown-menu>li>a,
+.navbar-custom .navbar-nav .open .dropdown-menu {
+  background-color: $light_navy;
+  color:white;
+}
+
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > li > a:hover{
+	color: $rnc_orange;
+	background-color: transparent;
+}
+
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:hover,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:active,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:focus {
+	background-color: transparent;
+}
+
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:hover,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:active,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:focus {
+	background-color: transparent;
+}

@@ -1,13 +1,14 @@
 <body>
   <%= render "layouts/navbar_top" %>
-	<!-- Main Content -->
 	<div class="container">
 	    <div class="row">
 	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 	            <% @blogs.each do |b| %>
-	            <% @user = User.find(b.user_id) %>
+	            <% @user = b.user %>
 	            <div class="post-preview">
-									<!--<h2 class="post-title">Title</h2>-->	                
+									<h2 class="post-title">
+										<%= b.title %>
+									</h2>	                
 									<h4 class="post-subtitle">
                     <%= b.content %>
                   </h4>
@@ -15,12 +16,12 @@
 	            </div>
 	            <hr>
 	            <% end %>
-	            <!-- Pager -->
-	            <ul class="pager">
-	                <li class="next">
-	                    <a href="#">Older Posts &rarr;</a> <!-- make this show older posts -->
-	                </li>
-	            </ul>
+	            <div class="pagniation-wrapper">
+		            <%= will_paginate @blogs,
+		             :renderer => BootstrapPagination::Rails,
+		            previous_label: h("newer"), next_label: h("older") %>
+		            <%= render "form" %>
+	            </div>
 	        </div>
 	    </div>
 	</div>

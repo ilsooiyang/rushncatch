@@ -2,21 +2,21 @@ class BlogsController < ApplicationController
 	before_action :require_signin, only: [:news]
 
 	def news
-		@blogs = Blog.all
+		@user = current_user
+		@blog = @user.blogs.new
+		@blogs= Blog.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
 	end
 
-	def index #shows all blog posts of a user
+	def index
 		set_user
 		@blogs = @user.blogs
 	end
 
-	def show #shows one blog post of a user
-		set_user
-		@blog = @user.blogs.find(params[:id])
+	def show
 	end
 
 	def new
-		set_user
+		@user = current_user
 		@blog = @user.blogs.new
 	end
 
@@ -40,7 +40,7 @@ class BlogsController < ApplicationController
 private
 
 	def blog_params
-		params.require(:blog).permit(:content)
+		params.require(:blog).permit(:content, :title)
 	end
 
 	def set_user

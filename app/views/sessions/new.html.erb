@@ -1,18 +1,12 @@
-<div class="container">
-	<%= form_tag session_path, method: 'post', :class => "form-horizontal center" do  %>
-	  <div class="form-group">
-	    <%= label_tag :email_or_username, "Email or Username:", class: "col-md-4 control-label" %>
-	    <div class="col-md-4">
-		    <%= text_field_tag :email_or_username, nil, class: 'form-control', autofocus: true %>
-		   </div>
-	  </div>
-	  <div class="form-group">
-	    <%=label_tag :password, "Password:", class: "col-md-4 control-label" %>
-	  <div class="col-md-4">
-	    <%= password_field_tag :password, nil, class: 'form-control'  %>
-	  </div>
-	  </div>
-		<%= submit_tag "Sign In", class: "btn btn-default btn-primary" %>
-		No account yet? <%= link_to 'Sign Up', signup_path, class: "btn btn-default btn-primary" %>				
-	<%end%>
-</div>
+<%= form_tag session_path, method: 'post', :class => "form-signin" do  %>
+
+	<h2 class="form-signin-heading">Please sign in</h2>
+
+  <%= label_tag :email_or_username, "Email or Username:", class: "sr-only" %>
+  <%= text_field_tag :email_or_username, nil, autofocus: true, placeholder: "Email or Username", class: "form-control" %>
+  <%=label_tag :password, "Password:", class: "sr-only" %>
+  <%= password_field_tag :password, nil, placeholder: "Password", class: 'form-control'  %>
+	<%= submit_tag "Sign In", class: "btn btn-default btn-primary btn-block" %>
+	<%= link_to 'Sign Up', signup_path, class: "btn btn-default btn-primary btn-block" %>				
+		
+<%end%>

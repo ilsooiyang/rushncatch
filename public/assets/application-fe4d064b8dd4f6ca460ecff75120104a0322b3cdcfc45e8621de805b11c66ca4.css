@@ -1,34 +1,67 @@
-/*!
- * Start Bootstrap - Clean Blog v3.3.7+1 (http://startbootstrap.com/template-overviews/clean-blog)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-/* line 8, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/clean_blog.scss */
-p {
-  line-height: 1.5;
-  margin: 30px 0;
+/*
+Fix
+1) navbar whitespace
+2) box shadow
+3) notice/alert msg
+4)
+/*
+
+/* Nav Bar */
+/* line 13, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom {
+  background-color: #171431;
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 0;
 }
 
-/* line 12, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/clean_blog.scss */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 800;
+/* line 20, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav > li > a {
+  color: white;
 }
 
-/* line 21, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/clean_blog.scss */
-a {
-  color: #333333;
+/* line 24, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav > li > a:hover {
+  color: #FCB525;
+  background-color: transparent;
 }
 
-/* line 24, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/clean_blog.scss */
-a:hover,
-a:focus {
-  color: #0085A1;
+/* line 29, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav > .close > a,
+.navbar-custom .navbar-nav > .close > a:hover,
+.navbar-custom .navbar-nav > .close > a:active,
+.navbar-custom .navbar-nav > .close > a:focus {
+  background-color: transparent;
+}
+
+/* line 36, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:active,
+.navbar-custom .navbar-nav > .open > a:focus {
+  background-color: transparent;
+}
+
+/* line 43, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > li > a:hover {
+  color: #FCB525;
+  background-color: transparent;
+}
+
+/* line 48, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:hover,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:active,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:focus {
+  background-color: transparent;
+}
+
+/* line 55, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:hover,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:active,
+.navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:focus {
+  background-color: transparent;
 }
 /*!
  * Start Bootstrap - Stylish Portfolio (http://startbootstrap.com/)
@@ -36,7 +69,7 @@ a:focus {
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 /* Global Styles */
-/* line 10, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 11, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 html,
 body {
   width: 100%;
@@ -44,31 +77,15 @@ body {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/* line 17, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.text-vertical-center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* line 23, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.text-vertical-center h1 {
-  margin: 0;
-  padding: 0;
-  color: #FFFFFF;
-  font-size: 4.5em;
-  font-weight: 700;
-}
-
 /* Custom Button Styles */
-/* line 33, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 20, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .btn-dark {
   border-radius: 0;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* line 39, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 26, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .btn-dark:hover,
 .btn-dark:focus,
 .btn-dark:active {
@@ -76,14 +93,14 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 46, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 33, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .btn-light {
   border-radius: 0;
   color: #333;
   background-color: white;
 }
 
-/* line 52, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 39, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .btn-light:hover,
 .btn-light:focus,
 .btn-light:active {
@@ -92,53 +109,7 @@ body {
 }
 
 /* Side Menu */
-/* line 61, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.navbar-brand page-scroll img {
-  width: 30px;
-  height: 30px;
-}
-
-/* line 67, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-#sidebar-wrapper {
-  z-index: 1000;
-  position: fixed;
-  right: 0;
-  width: 250px;
-  height: 100%;
-  transform: translateX(250px);
-  overflow-y: auto;
-  background: #222;
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-}
-
-/* line 83, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.sidebar-nav {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* line 92, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.sidebar-nav li {
-  text-indent: 20px;
-  line-height: 40px;
-}
-
-/* line 97, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-.sidebar-nav > .sidebar-brand {
-  height: 55px;
-  font-size: 18px;
-  line-height: 55px;
-}
-
-/* line 104, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 48, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 #menu-toggle {
   z-index: 1;
   position: fixed;
@@ -146,24 +117,13 @@ body {
   right: 0;
 }
 
-/* line 111, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
-#sidebar-wrapper.active {
-  right: 250px;
-  width: 250px;
-  -webkit-transition: all 0.4s ease 0s;
-  -moz-transition: all 0.4s ease 0s;
-  -ms-transition: all 0.4s ease 0s;
-  -o-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
-}
-
-/* line 121, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 55, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .toggle {
   margin: 5px 5px 0 0;
 }
 
 /* Header */
-/* line 127, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 61, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .header {
   display: table;
   position: relative;
@@ -177,23 +137,223 @@ body {
 }
 
 /* Footer */
-/* line 141, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 75, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 footer {
   padding: 100px 0;
 }
 
-/* line 145, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/stylish_portfolio.scss */
+/* line 79, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 #to-top {
   display: none;
   position: fixed;
   bottom: 5px;
   right: 5px;
 }
-/* line 6, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/users.scss */
+
+/* FLASHES */
+/* line 88, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+.flash {
+  color: #131127;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: #ffc 0 0 4px;
+}
+/* line 97, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+.flash.notice {
+  background-color: green;
+}
+/* line 101, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+.flash.alert {
+  background-color: red;
+}
+
+/* line 107, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .carousel-inner .item img {
   margin: auto;
   width: 500px;
   height: 500px;
+}
+
+/* line 114, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+.well {
+  min-height: 20px;
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/* line 1, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination {
+  background: white;
+  cursor: default;
+  /* self-clearing method: */
+}
+
+/* line 5, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination a, .pagination span, .pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* line 10, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination .disabled {
+  display: none;
+}
+
+/* line 12, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+
+/* line 18, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+}
+
+/* line 22, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination a:hover, .pagination a:focus {
+  background: white;
+  color: #000044;
+  border-color: #000044;
+}
+
+/* line 26, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination .pagination_links {
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+}
+
+/* line 31, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination .page_info {
+  margin: 0 auto;
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+}
+
+/* line 38, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+/* line 42, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 48, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+* html .pagination {
+  height: 1%;
+}
+
+/* line 50, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+*:first-child + html .pagination {
+  overflow: hidden;
+}
+
+/* line 52, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/pagination.css.scss */
+.pagniation-wrapper {
+  text-align: center;
+}
+/* line 1, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/sign_up.css.scss */
+.border-form-div {
+  max-width: 400px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 14, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/sign_up.css.scss */
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+
+/* line 18, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/sign_up.css.scss */
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+/* line 1, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+/* line 6, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+/* line 10, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+/* line 13, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* line 22, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+/* line 25, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin input[type="email_or_username"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* line 30, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/signin.css.scss */
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 @charset "UTF-8";
 /*

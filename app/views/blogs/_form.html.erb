@@ -1,11 +1,24 @@
-<%= form_for([@user, @blog]) do |f| %>
+<div class="well">
+	<%= form_for [@user, @blog] do |f| %>
+
 	<%= render "shared/errors" %>
-	<p>
-	<%= f.label :content %><br />
-	<%= f.text_area :content, cols: 100, rows: 10 %>
-	</p>
-	<p>
-	<%= f.submit "Post" %> |
-	<%= link_to("Cancel", user_blogs_path(@user)) %>
-	</p>
-<% end %>
+
+		<h4>What you would like to say?</h4>
+
+		<div class="form-group">
+		  <%= f.label :title, "Title:", class: "sr-only" %>
+		  <%= f.text_field :title, placeholder: "Title", class: "form-control" %>
+	  </div>
+
+	  <div class="form-group">
+		  <%= f.label :content, "Content:", class: "sr-only" %>
+		  <%= f.text_area :content, class: "form-control", rows: 3 %>
+	  </div>
+
+		<%= submit_tag "Post", class: "btn btn-primary" %>
+		<% unless current_page?(news_url) %>
+			<%= link_to "Cancel", news_path, class: "btn btn-primary" %>
+		<% end %>
+	<% end %>
+
+</div>

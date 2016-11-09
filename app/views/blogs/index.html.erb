@@ -1,20 +1,24 @@
-<header>
-	<h1>RnC News</h1>
-</header>
-<br />
 <body>
-	<% @blogs.each do |b| %>
-		<% @user = User.find(b.user_id) %>
-		<p>
-			<%= link_to(@user.name, user_path(@user)) %> |
-			<%= "#{time_ago_in_words(b.created_at)} ago" %>
-		</p>
-		<p>
-			<%= truncate(b.content, length: 100, separator: " ") %>
-			<%= link_to("See full post", user_blog_path(@user, b)) %>
-		</p>
-	<% end %>
+  <%= render "layouts/navbar_top" %>
+	<!-- Main Content -->
+	<div class="container">
+	    <div class="row">
+	        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+	            <% @blogs.each do |b| %>
+	            <% @user = b.user %>
+	            <div class="post-preview">
+									<h2 class="post-title">
+										<%= b.title %>
+									</h2>	                
+									<h4 class="post-subtitle">
+                    <%= b.content %>
+                  </h4>
+	                <p class="post-meta">Posted by <%= link_to(@user.name, user_path(@user)) %> <%= time_ago_in_words(b.created_at) %> ago</p>
+	            </div>
+	            <hr>
+	            <% end %>
+	        </div>
+	    </div>
+	</div>
 </body>
-<br />
-
 <%= render "layouts/footer" %>
