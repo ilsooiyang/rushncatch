@@ -1,32 +1,54 @@
-/*
-Fix
-1) navbar whitespace
-2) box shadow
-3) notice/alert msg
-4)
-/*
+/* line 5, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.user-page {
+  padding-top: 50px;
+}
 
 /* Nav Bar */
-/* line 13, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
-.navbar-custom {
+/* line 11, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar.navbar-custom {
   background-color: #171431;
   border-radius: 0;
   border: 0;
   margin-bottom: 0;
 }
 
-/* line 20, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 18, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-header .navbar-toggle {
+  background-color: white;
+}
+
+/* line 22, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-header .navbar-toggle .icon-bar {
+  background-color: #171431;
+}
+
+/* line 26, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav .dropdown-menu {
+  border: 0;
+}
+
+/* line 30, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-brand > img {
+  height: 100%;
+}
+
+/* line 34, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-brand {
+  padding: 0;
+}
+
+/* line 38, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav > li > a {
   color: white;
 }
 
-/* line 24, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 42, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav > li > a:hover {
   color: #FCB525;
   background-color: transparent;
 }
 
-/* line 29, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 47, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav > .close > a,
 .navbar-custom .navbar-nav > .close > a:hover,
 .navbar-custom .navbar-nav > .close > a:active,
@@ -34,7 +56,7 @@ Fix
   background-color: transparent;
 }
 
-/* line 36, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 54, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav > .open > a,
 .navbar-custom .navbar-nav > .open > a:hover,
 .navbar-custom .navbar-nav > .open > a:active,
@@ -42,13 +64,20 @@ Fix
   background-color: transparent;
 }
 
-/* line 43, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 61, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+.navbar-custom .navbar-nav .open .dropdown-menu > li > a,
+.navbar-custom .navbar-nav .open .dropdown-menu {
+  background-color: #171431;
+  color: white;
+}
+
+/* line 67, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > li > a:hover {
   color: #FCB525;
   background-color: transparent;
 }
 
-/* line 48, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 72, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a,
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:hover,
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .close > a:active,
@@ -56,20 +85,14 @@ Fix
   background-color: transparent;
 }
 
-/* line 55, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
+/* line 79, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/custom.css.scss */
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a,
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:hover,
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:active,
 .navbar-custom .navbar-nav .dropdown .dropdown-menu > .open > a:focus {
   background-color: transparent;
 }
-/*!
- * Start Bootstrap - Stylish Portfolio (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-/* Global Styles */
-/* line 11, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 5, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 html,
 body {
   width: 100%;
@@ -77,53 +100,8 @@ body {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/* Custom Button Styles */
-/* line 20, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-.btn-dark {
-  border-radius: 0;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* line 26, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* line 33, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-.btn-light {
-  border-radius: 0;
-  color: #333;
-  background-color: white;
-}
-
-/* line 39, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-.btn-light:hover,
-.btn-light:focus,
-.btn-light:active {
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-/* Side Menu */
-/* line 48, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-#menu-toggle {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  right: 0;
-}
-
-/* line 55, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
-.toggle {
-  margin: 5px 5px 0 0;
-}
-
 /* Header */
-/* line 61, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 14, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .header {
   display: table;
   position: relative;
@@ -137,12 +115,12 @@ body {
 }
 
 /* Footer */
-/* line 75, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 28, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 footer {
   padding: 100px 0;
 }
 
-/* line 79, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 32, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 #to-top {
   display: none;
   position: fixed;
@@ -151,7 +129,7 @@ footer {
 }
 
 /* FLASHES */
-/* line 88, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 41, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .flash {
   color: #131127;
   border-radius: 4px;
@@ -161,23 +139,24 @@ footer {
   text-transform: uppercase;
   box-shadow: #ffc 0 0 4px;
 }
-/* line 97, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 50, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .flash.notice {
   background-color: green;
 }
-/* line 101, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 54, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .flash.alert {
   background-color: red;
 }
 
-/* line 107, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* CAROUSEL */
+/* line 62, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .carousel-inner .item img {
   margin: auto;
   width: 500px;
   height: 500px;
 }
 
-/* line 114, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
+/* line 69, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/layout.css.scss */
 .well {
   min-height: 20px;
   padding: 19px;
@@ -281,7 +260,7 @@ footer {
 /* line 1, /Users/ilsoo93/Coding/rails/projects/players/app/assets/stylesheets/sign_up.css.scss */
 .border-form-div {
   max-width: 400px;
-  padding: 19px 29px 29px;
+  padding: 10px 19px 29px 29px;
   margin: 0 auto 20px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
@@ -12678,16 +12657,3 @@ button.close {
   overflow: visible;
   clip: auto;
 }
-
-/*
-
-When Heroku gives you shit list
-
-1) bundle exec rails assets:precompile
-2) check heroku logs for errors
-
-
-ID's are unique (serial number)
-Class's are reusable (barcode)
-
-*/
