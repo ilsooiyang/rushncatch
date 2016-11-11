@@ -1,12 +1,14 @@
-<%= form_tag session_path, method: 'post', :class => "form-signin" do  %>
+<body>
+	<%= form_tag session_path, method: 'post', :class => "form-signin" do  %>
 
-	<h2 class="form-signin-heading">Please sign in</h2>
+		<h2 class="form-signin-heading">Please sign in</h2>
 
-  <%= label_tag :email_or_username, "Email or Username:", class: "sr-only" %>
-  <%= text_field_tag :email_or_username, nil, autofocus: true, placeholder: "Email or Username", class: "form-control" %>
-  <%=label_tag :password, "Password:", class: "sr-only" %>
-  <%= password_field_tag :password, nil, placeholder: "Password", class: 'form-control'  %>
-	<%= submit_tag "Sign In", class: "btn btn-default btn-primary btn-block" %>
-	<%= link_to 'Sign Up', signup_path, class: "btn btn-default btn-primary btn-block" %>				
-		
-<%end%>
+	  <%= label_tag :email_or_username, "Email or Username:", class: "sr-only" %>
+	  <%= text_field_tag :email_or_username, nil, autofocus: true, placeholder: "Email or Username", class: "form-control" %>
+	  <%=label_tag :password, "Password:", class: "sr-only" %>
+	  <%= password_field_tag :password, nil, placeholder: "Password", class: 'form-control'  %>
+		<%= submit_tag "Sign In", class: "btn btn-default btn-primary btn-block" %>
+		<%= link_to 'Sign Up', signup_path, class: "btn btn-default btn-primary btn-block" %>				
+			
+	<%end%>
+</body>

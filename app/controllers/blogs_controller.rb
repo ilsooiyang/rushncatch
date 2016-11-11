@@ -2,13 +2,13 @@ class BlogsController < ApplicationController
 	before_action :require_signin, only: [:news]
 
 	def news
-		@user = current_user
+		set_current_user
 		@blog = @user.blogs.new
 		@blogs= Blog.order(created_at: :desc).paginate(:page => params[:page], :per_page => 5)
 	end
 
 	def index
-		set_user
+		@user = User.find(params[:user_id])
 		@blogs = @user.blogs
 	end
 
@@ -16,12 +16,12 @@ class BlogsController < ApplicationController
 	end
 
 	def new
-		@user = current_user
+		set_current_user
 		@blog = @user.blogs.new
 	end
 
 	def create
-		set_user
+		set_current_user
 		@blog = @user.blogs.new(blog_params)
 		if @blog.save
 			redirect_to news_path, notice: "Successfully Posted"
@@ -43,8 +43,8 @@ private
 		params.require(:blog).permit(:content, :title)
 	end
 
-	def set_user
-		@user = User.find(params[:user_id])
+	def set_current_user
+		@user = current_user
 	end
 
 end

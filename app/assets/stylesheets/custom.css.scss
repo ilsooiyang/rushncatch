@@ -2,17 +2,22 @@ $light_navy: #171431;
 $dark_navy: #131127;
 $rnc_orange: #FCB525;
 
-.user-page {
-	padding-top: 50px;
+.user-show > img {
+	width: 100%;
+}
+
+.form-padding {
+	padding-top: 30px;
 }
 
 /* Nav Bar */
 
-.navbar.navbar-custom {
+.navbar.navbar-custom {	
 	background-color: $light_navy;
 	border-radius: 0;
 	border: 0;
 	margin-bottom: 0;
+
 }
 
 .navbar-custom .navbar-header .navbar-toggle {

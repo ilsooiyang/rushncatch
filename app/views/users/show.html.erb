@@ -1,23 +1,24 @@
 <body>
     <%= render "layouts/navbar_top" %>
 	<div class="container">
-        <div class="row user-page">
+        <div class="row">
 
-            <div class="col-md-7">
+        
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 user-show">
                 <%= image_tag gravatar_id(@user) %>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 user-show">
+
                 <h3><%= "#{@user.name} ##{@user.number}"%></h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
+
+                <p><%= @user.intro %></p>
+
                 <% if @user.blogs.any? %>
                     <p><%= link_to("See all posts by #{@user.name}", 
-                                user_blogs_path(@user)) %>
-                    </p>
+                                user_blogs_path(@user)) %></p>
                 <% end %>
-
             </div>
-
         </div>
 
 	</div>
