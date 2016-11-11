@@ -63,7 +63,8 @@ private
 		unless current_user?(@user) || current_user_admin?
 			#unless the dude that's signed in is the dude that's being deleted
 			#or the dude that's signed in is an admin
-			redirect_to root_path, alert: "Unauthorized Access"
+			redirect_to root_path
+      flash[:error] = "Unauthorized Access"
 		end
 	end
 

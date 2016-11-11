@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
 	def create
 		if @user = User.authenticate(params[:email_or_username], params[:password])
 			session[:user_id] = @user.id
-			flash[:success] = "Signed in as #{@user.name}"
 			redirect_to(session[:intended_url] || @user)
+			flash[:success] = "Signed in as #{@user.name}"
 			session[:intended_url] = nil
 		else
 			render :new

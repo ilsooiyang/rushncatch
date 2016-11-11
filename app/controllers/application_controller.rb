@@ -4,14 +4,16 @@ class ApplicationController < ActionController::Base
   def require_signin
   	unless current_user
   		session[:intended_url] = request.url
-  		redirect_to signin_path, notice: "This page requires signin"
+      flash[:error] = "This page requires signin"
+  		redirect_to signin_path
   	end
   	#unless there is somebody signed in redirect them to the signin page
   end
 
   def require_admin
   	unless current_user_admin?
-  		redirect_to root_path, notice: "Unauthorized Access"
+      flash[:error] = "Unauthorized Access"
+  		redirect_to root_path
   	end
   end
 

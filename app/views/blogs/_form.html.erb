@@ -1,4 +1,4 @@
-<div class="well">
+<div class="well text-center">
 	<%= form_for [@user, @blog] do |f| %>
 
 	<%= render "shared/errors" %>
@@ -12,7 +12,7 @@
 
 	  <div class="form-group">
 		  <%= f.label :content, "Content:", class: "sr-only" %>
-		  <%= f.text_area :content, class: "form-control", rows: 3 %>
+		  <%= f.text_area :content, class: "form-control", rows: 7 %>
 	  </div>
 
 		<%= submit_tag "Post", class: "btn btn-primary" %>
@@ -20,5 +20,4 @@
 			<%= link_to "Cancel", news_path, class: "btn btn-primary" %>
 		<% end %>
 	<% end %>
-
 </div>
