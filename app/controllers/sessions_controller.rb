@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
 
 	def new
+		@disable_nav = true
 		if current_user
 			redirect_to current_user
 		end

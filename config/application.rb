@@ -13,3 +13,6 @@ module Players
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+
+# RAILS_ENV=production bundle exec rails assets:precompile

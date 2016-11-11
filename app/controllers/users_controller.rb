@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 	before_action :require_correct_user, only: [:edit, :update, :destroy]
 
 	def home
+		@disable_nav = true
 	end
 
 	def index
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
 	end
 
 	def new
+		@disable_nav = true
 		@user = User.new
 	end
 

@@ -3,7 +3,7 @@
     <header>
       <h2>
         <% if current_user %>
-          Come on <%= @user.name %>,<br>
+          <%= "Come on #{@current_user.name}," %><br>
           fix the errors.
         <% else %>
           Please correct the following <%= pluralize(@user.errors.count, "error") %>:
@@ -17,3 +17,5 @@
     </ul>
   </div>
 <% end %>
+
+<!-- use bootstrap -->
