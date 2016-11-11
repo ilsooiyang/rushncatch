@@ -24,6 +24,10 @@
   <%= f.label :password_confirmation, "Confirm Password:" %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
 </div>
+<div class="form-group">
+  <%= f.label :intro, "Tell us about yourself:" %>
+  <%= f.text_area :intro, class: "form-control", rows: 5 %>
+</div>
 <p>
   <% if current_user %>
     <%= f.submit "Update", class: "btn btn-default btn-primary btn-block" %>

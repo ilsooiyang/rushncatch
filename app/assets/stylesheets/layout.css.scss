@@ -12,11 +12,10 @@ body {
 /* Header */
 
 .header {
-    display: table;
+    display: block;
     position: relative;
     width: 100%;
     height: 100%;
-    background: url("logo.png") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -36,26 +35,6 @@ footer {
   right: 5px;
 }
 
-/* FLASHES */
-
-.flash {
-  color: $dark_navy;
-  border-radius: 4px;
-  padding: 10px;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  box-shadow: #ffc 0 0 4px;
-  
-  &.notice {
-    background-color: green;
-  }
-
-  &.alert {
-    background-color: red;
-  }
-}
-
 /* CAROUSEL */
 
 .carousel-inner .item {
@@ -65,6 +44,17 @@ footer {
         height: 500px;
     }
 }
+
+/* ALERT */
+
+.alert.alert-custom {
+    border-radius: 0;
+    border: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* BLOG */
 
 .well {
     min-height: 20px;

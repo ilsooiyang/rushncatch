@@ -24,17 +24,21 @@ class BlogsController < ApplicationController
 		set_current_user
 		@blog = @user.blogs.new(blog_params)
 		if @blog.save
-			redirect_to news_path, notice: "Successfully Posted"
+			redirect_to news_path
+			flash[:success] = "Posted"
 		else
 			render :new
 		end
+	end
+
+	def edit
 	end
 
 	def destroy
 		@blog = Blog.find(params[:id])
 		@user = User.find(@blog.user_id)
 		@blog.destroy
-		redirect_to user_blogs_path(@user), notice: "Successfully Deleted"
+		redirect_to user_blogs_path(@user), alert: "Deleted"
 	end
 
 private

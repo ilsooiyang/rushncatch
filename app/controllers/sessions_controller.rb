@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 	def create
 		if @user = User.authenticate(params[:email_or_username], params[:password])
 			session[:user_id] = @user.id
-			flash[:notice] = "Successfully signed in as #{@user.name}"
+			flash[:success] = "Signed in as #{@user.name}"
 			redirect_to(session[:intended_url] || @user)
 			session[:intended_url] = nil
 		else
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session[:user_id] = nil
-		redirect_to root_url, notice: "Successfully signed out"
+		redirect_to root_url, alert: "Signed out"
 	end
 
 end
